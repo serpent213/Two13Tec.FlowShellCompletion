@@ -1,8 +1,18 @@
+[formatter.phpcbf]
+command = "phpcbf"
+options = [
+  "--standard=PSR12"
+]
+includes = [
+  "Classes/**/*.php",
+  "Tests/**/*.php",
+]
+
 [formatter."php-cs-fixer"]
 command = "php-cs-fixer"
 options = [
   "fix",
-  "--config=../../.php-cs-fixer.php",
+  "--config=./.php-cs-fixer.php",
   "--allow-risky=yes",
   "--"
 ]

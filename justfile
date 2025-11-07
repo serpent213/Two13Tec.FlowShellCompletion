@@ -39,7 +39,7 @@ lint-syntax:
 # Check code style
 lint-style:
   phpcs --standard=PSR12 Classes/ Tests/
-  prettier --check ./composer.json Configuration/
+  prettier --check ./composer.json
 
 # Run static analysis
 lint-static:
@@ -47,11 +47,11 @@ lint-static:
 
 # Check code format
 lint-format:
-  @treefmt --config-file treefmt.toml --fail-on-change
+  @treefmt --config-file .treefmt.toml --fail-on-change
 
 # Fix code style
 format:
-  @treefmt --config-file treefmt.toml
+  @treefmt --config-file .treefmt.toml
 
 # Run all linting checks
 lint: lint-format lint-syntax lint-style lint-static
