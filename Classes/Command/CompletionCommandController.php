@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Two13Tec\FlowShellCompletion\Command;
 
 /*
@@ -157,7 +159,10 @@ ZSH;
     /**
      * Render the handler function for a specific Flow command
      *
-     * @param array{handler: string, arguments: array<int, array{dashedName: string, description: string, label: string, acceptsValue: bool}>} $command
+     * @param array{
+     *     handler: string,
+     *     arguments: array<int, array{dashedName: string, description: string, label: string, acceptsValue: bool}>
+     * } $command
      */
     protected function renderZshHandler(array $command): string
     {
@@ -216,7 +221,13 @@ ZSH;
     /**
      * Build completion entries with shortest identifiers, descriptions, and option metadata
      *
-     * @return array<int, array{identifier: string, shortDescription: string, detailedDescription: string, handler: string, arguments: array<int, array{dashedName: string, description: string, label: string, acceptsValue: bool}>}>
+     * @return array<int, array{
+     *     identifier: string,
+     *     shortDescription: string,
+     *     detailedDescription: string,
+     *     handler: string,
+     *     arguments: array<int, array{dashedName: string, description: string, label: string, acceptsValue: bool}>
+     * }>
      */
     protected function getCommandCompletionEntries(): array
     {
@@ -382,5 +393,4 @@ ZSH;
             $this->outputLine('  ' . $sourceLine);
         }
     }
-
 }

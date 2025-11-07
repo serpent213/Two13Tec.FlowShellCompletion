@@ -2,7 +2,16 @@
     "name": "two13tec/flow-shell-completion",
     "type": "neos-package",
     "description": "Shell completion support for Neos Flow CLI commands (zsh, fish, nix/home-manager)",
-    "keywords": ["flow", "neos", "cli", "completion", "zsh", "fish", "shell", "nix"],
+    "keywords": [
+        "flow",
+        "neos",
+        "cli",
+        "completion",
+        "zsh",
+        "fish",
+        "shell",
+        "nix"
+    ],
     "license": "MIT",
     "authors": [
         {

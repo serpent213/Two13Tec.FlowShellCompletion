@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Two13Tec\FlowShellCompletion\Tests\Functional;
 
 /*
@@ -67,7 +69,11 @@ class ZshCompletionTest extends FunctionalTestCase
             $checkCommand .= ' 2>&1'; // Route stderr to stdout for full output
             exec($checkCommand, $zshOutput, $zshExitCode);
 
-            self::assertSame(0, $zshExitCode, 'zsh must be able to source the generated completion script: ' . implode(PHP_EOL, $zshOutput));
+            self::assertSame(
+                0,
+                $zshExitCode,
+                'zsh must be able to source the generated completion script: ' . implode(PHP_EOL, $zshOutput)
+            );
         } finally {
             @unlink($scriptPath);
         }
